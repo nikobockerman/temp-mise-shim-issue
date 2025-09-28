@@ -5,4 +5,5 @@ Reproduces a random problem where `mise upgrade` fails to create a shim for `uv`
 ## Workflow to reproduce
 
 1. Build container with `./build-container.sh`
-2. Run the reproduction script with `./run-repro.sh`
+1. Export MISE_GITHUB_TOKEN environment variable
+1. Run the reproduction script with `./run-repro.sh`
