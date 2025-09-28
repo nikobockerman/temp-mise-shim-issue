@@ -4,8 +4,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     nodejs \
     npm \
-    python3 \
-    python-is-python3 \
     zstd \
     && rm -rf /var/lib/apt/lists/*
 
