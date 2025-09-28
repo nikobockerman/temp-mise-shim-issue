@@ -39,6 +39,17 @@ for i in $(seq 1 100); do
     for shim in pip pip3 pip3.13 prettier pydoc3 pydoc3.13 python python3 python3-config python3.13 python3.13-config uv uvx; do
         if [ ! -f "${miseDataDir}/shims/${shim}" ]; then
             echo "${shim} shim not found"
+
+            unset MISE_TRACE
+            mise doctor 2>&1 | tee /tmp/output/doctor.log
+
+            export MISE_TRACE=1
+            mise reshim 2>/tmp/output/reshim.log
+            if [ -f "${miseDataDir}/shims/${shim}" ]; then
+                echo "${shim} shim found after reshim"
+            else
+                echo "${shim} shim not found after reshim"
+            fi
             exit 1
         fi
     done
