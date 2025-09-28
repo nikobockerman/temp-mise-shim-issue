@@ -36,7 +36,7 @@ for i in $(seq 1 100); do
 
     # Verify shims
     ls -la "${miseDataDir}/shims"
-    for shim in pip pip3 pip3.13 prettier pydoc3 pydoc3.13 python python3 python3-config python3.13 python3.13-config shellcheck uv uvx; do
+    for shim in pip pip3 pip3.13 prettier pydoc3 pydoc3.13 python python3 python3-config python3.13 python3.13-config uv uvx; do
         if [ ! -f "${miseDataDir}/shims/${shim}" ]; then
             echo "${shim} shim not found"
             exit 1

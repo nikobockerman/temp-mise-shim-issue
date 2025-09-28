@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
     npm \
     python3 \
     python-is-python3 \
-    shellcheck \
     zstd \
     && rm -rf /var/lib/apt/lists/*
 
