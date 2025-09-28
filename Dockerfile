@@ -13,7 +13,7 @@ WORKDIR /home/ubuntu
 
 ENV MISE_BIN_DIR=/home/ubuntu/_temp/bin
 ENV MISE_DATA_DIR=/home/ubuntu/_temp/mise-data
-ENV MISE_VERSION=v2025.9.16
+ENV MISE_VERSION=v2025.9.22
 
 RUN mkdir -p ${MISE_BIN_DIR}
 RUN mkdir -p ${MISE_DATA_DIR}
